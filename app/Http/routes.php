@@ -29,5 +29,6 @@ Route::get('login', 'LoginFB@index');
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+	Route::get('home', 'Home@index');
+	Route::get('login/facebook', 'FacebookController@login');	
 });
