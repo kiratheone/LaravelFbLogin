@@ -5,6 +5,10 @@
 	<link href="{{{ asset('/css/mycss.css') }}}" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<p>Helow login fb</p>
+	<form>
+		<h2>Helo login</h2>
+		<input></input>
+		<button>Connect</button>
+	</form>
 </body>
 </html>
