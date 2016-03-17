@@ -4,3 +4,13 @@
     align-items: center;
     display: flex;
 }
+
+.form-login {
+    text-align: center;
+    background: #9C27B0;
+    max-width: 300px;
+    padding: 30px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
