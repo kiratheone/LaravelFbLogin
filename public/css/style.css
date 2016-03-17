@@ -1,6 +1,9 @@
+body {
+    background-color: #E0E0E0;
+}
+
 .login-container {
     height: 90vh;
-    background-color: #E0E0E0;
     align-items: center;
     display: flex;
 }
