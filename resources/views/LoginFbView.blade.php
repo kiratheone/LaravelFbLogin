@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Login with Facebook</title>
-	<link href="{{{ asset('/css/mycss.css') }}}" rel="stylesheet" type="text/css">
+	<link href="{{{ asset('/res/style.css') }}}" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<form>
