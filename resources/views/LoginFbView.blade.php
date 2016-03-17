@@ -4,7 +4,7 @@
         <title>
             Login with Facebook
         </title>
-        <link href="{{{ asset('/res/style.css') }}}" rel="stylesheet" type="text/css"/>
+        <link href="{{{ asset('/css/style.css') }}}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div>
