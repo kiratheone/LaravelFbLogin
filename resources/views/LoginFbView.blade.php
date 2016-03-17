@@ -5,10 +5,11 @@
 	<link href="{{{ asset('/res/style.css') }}}" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<form>
-		<h2>Helo login</h2>
-		<input></input>
-		<button>Connect</button>
-	</form>
+	<div>
+		<form>
+			<h2>Helo login</h2>
+			<button>Connect</button>
+		</form>
+	</div>
 </body>
 </html>
