@@ -21,7 +21,15 @@ body {
 .login-container h2{
     text-align: left;
     color: white;
-    margin: 0px;
+    margin: 0px 0px 35px 0px;
     padding: 10px;
     background-color: #2196F3;
+}
+
+.btn-fb-login{
+    background: #425F9C;
+    color: white;
+    padding: 5px 10px;
+    align-items: center;
+    text-decoration: none;
 }
