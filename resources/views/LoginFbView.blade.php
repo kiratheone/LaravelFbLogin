@@ -10,7 +10,7 @@
         <div class="login-container">
             <form class="form-login">
                 <h2>
-                    Helo login
+                    Login
                 </h2>
                 <button>
                     Connect
