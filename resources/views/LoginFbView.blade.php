@@ -12,9 +12,7 @@
                 <h2>
                     Login
                 </h2>
-                <button>
-                    Connect
-                </button>
+                <a class="btn-fb-login" href="">Login with Facebook</a>
             </form>
         </div>
     </body>
