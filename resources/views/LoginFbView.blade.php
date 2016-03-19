@@ -13,7 +13,7 @@
                 <h2>
                     Login
                 </h2>
-                <a class="btn-fb-login" href="">Login with Facebook</a>
+                <a class="btn-fb-login" href="{{ url('/login/facebook')}}">Login with Facebook</a>
             </form>
         </div>
     </body>
