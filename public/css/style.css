@@ -17,17 +17,28 @@ body {
     display: block;
     margin-right: auto;
     margin-left: auto;
+    -webkit-box-shadow: 1px 3px 5px 2px rgba(194, 192, 194, 1);
+    -moz-box-shadow: 1px 3px 5px 2px rgba(194, 192, 194, 1);
+    box-shadow: 1px 3px 5px 2px rgba(194, 192, 194, 1);
+    border-radius: 2px;
 }
 
-.login-container h2{
+.login-container h2 {
+    font-size: 14pt;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
     text-align: left;
     color: white;
     margin: 0px 0px 35px 0px;
     padding: 10px;
     background-color: #2196F3;
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(194, 192, 194, 1);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(194, 192, 194, 1);
+    box-shadow: 1px 1px 5px 1px rgba(194, 192, 194, 1);
 }
 
-.btn-fb-login{
+.btn-fb-login {
+    border-radius: 5px;
     background: #425F9C;
     color: white;
     padding: 10px 15px;
