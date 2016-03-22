@@ -12,10 +12,12 @@
 */
 
 Route::get('/', function () {
-    return redirect()->action('LoginFB@index');
+    // return redirect()->action('LoginFB@index');
+    return view('welcome');
 });
 
 Route::get('login', 'LoginFB@index');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +30,24 @@ Route::get('login', 'LoginFB@index');
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-	Route::get('home', 'Home@index');
-	Route::get('login/facebook', 'FacebookController@login');	
+// Route::group(['middleware' => ['web']], function () {
+// 	Route::get('home', 'Home@index');
+// 	Route::get('login/facebook', 'FacebookController@login');
+// 	Route::post('test', [
+//         'uses' => 'LoginFB@index',
+//         'as' => 'test',
+//         'middleware' => 'auth'
+//     ]);
+// });
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    Route::get('login', 'LoginFB@index');
+    Route::get('login/facebook', 'FacebookController@login');
+    Route::get('onlogin', 'FacebookController@callback');
+   	Route::get('home', [
+        'uses' => 'HomeController@index',
+        'as' => 'home',
+        'middleware' => 'auth'
+    ]);
 });
