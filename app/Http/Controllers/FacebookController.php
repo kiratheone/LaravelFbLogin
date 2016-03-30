@@ -8,6 +8,7 @@ use App\Http\Requests;
 use Socialite;
 use App\User;
 Use Auth;
+use Exception;
 
 class FacebookController extends Controller
 {
@@ -18,17 +19,22 @@ class FacebookController extends Controller
 
 	public function callback()
 	{
-	    $user = Socialite::driver('facebook')->user();
-	    //User::create(['name'=>$user->getName(), 'email'=>$user->getEmail()]);
-	    $userCheck = User::whereEmail([$user->getEmail()])->first();
-	    // dd($userCheck);
-	    if ($userCheck) {
-	    	Auth::login($userCheck);
-	    	return redirect('home');
-	    } else {
-	    	$user = User::create(['name'=>$user->getName(), 'email'=>$user->getEmail()]);
-	    	Auth::login($user);
-	    	return redirect('home');
+	    try {
+	    	$user = Socialite::driver('facebook')->user();
+	    	//User::create(['name'=>$user->getName(), 'email'=>$user->getEmail()]);
+		    $userCheck = User::whereEmail([$user->getEmail()])->first();
+		    // dd($userCheck);
+		    if ($userCheck) {
+		    	Auth::login($userCheck);
+		    	return redirect('home');
+		    } else {
+		    	$user = User::create(['name'=>$user->getName(), 'email'=>$user->getEmail()]);
+		    	Auth::login($user);
+		    	return redirect('home');
+		    }	
+	    } catch (Exception $e) {
+	    	return  "Something happend, i dont know why";
 	    }
+	    
 	}
 }
