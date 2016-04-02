@@ -22,17 +22,25 @@ class FacebookController extends Controller
 	    try {
 	    	$user = Socialite::driver('facebook')->user();
 	    	//User::create(['name'=>$user->getName(), 'email'=>$user->getEmail()]);
-		    $userCheck = User::whereEmail([$user->getEmail()])->first();
+		    $userCheck = User::whereId_fb([$user->getId()])->first();
 		    // dd($userCheck);
+		    // dd($user);
 		    if ($userCheck) {
 		    	Auth::login($userCheck);
 		    	return redirect('home');
 		    } else {
-		    	$user = User::create(['name'=>$user->getName(), 'email'=>$user->getEmail()]);
-		    	Auth::login($user);
+		    	$createUser =  User::create([
+			            'id_fb' => $user->getId(),
+			            'name' => $user->getName(),
+			            'email' => $user->getEmail(),
+			            'user_fb_token' => $user->token,
+			            'avatar_url' => $user->getAvatar()]);
+
+		    	Auth::login($createUser);
 		    	return redirect('home');
 		    }	
 	    } catch (Exception $e) {
+	    	dd($e);
 	    	return  "Something happend, i dont know why";
 	    }
 	    
