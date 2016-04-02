@@ -49,13 +49,23 @@ body {
 .widget-profil{
     width: 360px;
     padding: 75px 75px 75px 75px;
-    margin: auto 0 auto, 0;
+    margin-left: auto;
+    margin-right: auto;
     background-color: white;
 }
 
 .avatar{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     overflow: hidden;
     border-radius: 150px;
     margin: 0 auto 35px auto;
+}
+
+.widget-info{
+    width: 360px;
+    padding: 75px 75px 75px 75px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
