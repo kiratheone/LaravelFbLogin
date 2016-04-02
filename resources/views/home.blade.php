@@ -1,17 +1,17 @@
-@extends('layouts.app')
+@extends('layouts.parent')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+<div class="widget-profil">
+    <div class="avatar">
+        <img src="{{ Auth::user()->avatar_url }}">
+    </div>
+    <div>
+        <p>Wellcome</p>
+        <h2>{{ Auth::user()->name }}</h2>
+        <h3>{{ Auth::user()->email }}</h3>
+    </div>
+    <div >
+         <a class="btn-fb-login" href="{{ url('/logout')}}">Logout</a>
     </div>
 </div>
 @endsection
